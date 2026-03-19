@@ -1,0 +1,2 @@
+run_timestamp,input_file,output_jobs_file,output_skills_file,input_rows,output_jobs_rows,output_skills_rows,duplicates_removed,status
+2026-03-18 17:28:48,data/raw/jobs_raw.parquet,data/processed/jobs_clean.parquet,data/processed/job_skills.parquet,785741,784895,3591106,846,success
