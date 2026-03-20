@@ -1154,7 +1154,7 @@ MIT License - see LICENSE file for details.
 
 ## Contact
 
-For questions about this project or collaboration opportunities, please reach out via [GitHub](https://github.com/yourusername) or [LinkedIn](https://linkedin.com/in/yourprofile).
+For questions about this project or collaboration opportunities, please reach out via [GitHub](https://github.com/Aravind5100) or [LinkedIn](https://linkedin.com/in/aravindkompalli).
 
 ---
 
