@@ -1,4 +1,4 @@
-# Career Intelligence & Skills Transition Platform
+# Career Intelligence Data Platform
 
 **An end-to-end labor market intelligence system combining medallion-architecture data pipelines, AWS S3 storage, advanced analytics, and machine learning to transform 785K+ job postings into actionable career insights.**
 
