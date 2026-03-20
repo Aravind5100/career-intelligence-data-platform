@@ -316,7 +316,7 @@ Role-level remote vs. non-remote breakdown.
 - `job_title_short`, `work_mode`, `job_count`, `percentage`
 
 **Storage**:
-- Local: `data/processed/gold/`
+- Local: `data/exports/` (prefixed with `gold_`)
 - S3: `s3://career-intelligence-data-platform/gold/`
 
 ---
@@ -833,59 +833,64 @@ career-intelligence-data-platform/
 ├── data/
 │   ├── raw/                                # Bronze layer (local)
 │   │   └── jobs_raw.parquet
-│   ├── processed/                          # Silver & Gold layers (local)
+│   ├── processed/                          # Silver layer (local)
 │   │   ├── jobs_clean.parquet
 │   │   ├── job_skills.parquet
-│   │   ├── quality_report.txt
 │   │   ├── pipeline_run_metadata.csv
-│   │   └── gold/
 │   ├── ml_ready/                           # ML feature tables
 │   │   ├── feature_role_classification.csv
 │   │   ├── feature_skill_weekly.csv
 │   │   ├── feature_role_skill_vectors.csv
 │   │   └── feature_job_anomalies.csv
-│   └── exports/                            # ML outputs & dashboard summaries
+│   └── exports/                            # Gold, ML outputs & dashboard summaries
+│       ├── gold_role_summary.csv
+│       ├── gold_skill_summary.csv
+│       ├── gold_role_skill_matrix.csv
+│       ├── gold_location_summary.csv
+│       ├── gold_jobs_weekly.csv
+│       ├── gold_role_remote_summary.csv
 │       ├── ml_role_predictions.csv
 │       ├── ml_skill_forecasts.csv
 │       ├── ml_emerging_skills.csv
 │       ├── ml_role_similarity.csv
 │       ├── ml_transition_recommendations.csv
 │       ├── ml_posting_anomalies.csv
-│       └── dashboard/
+│       ├── ml_summary_classification.csv
+│       ├── ml_summary_emerging_skills.csv
+│       ├── ml_summary_anomaly_counts.csv
+│       └── ml_summary_top_transitions.csv
 │
 ├── notebooks/                              # Jupyter notebooks for exploration
-│   ├── 01_data_ingestion.ipynb
-│   ├── 02_data_cleaning.ipynb
-│   ├── 03_eda.ipynb
-│   ├── 04_gold_layer.ipynb
-│   ├── 05_ml_classification.ipynb
-│   ├── 06_ml_forecasting.ipynb
-│   ├── 07_ml_recommendation.ipynb
-│   └── 08_ml_anomaly_detection.ipynb
+│   ├── 01_eda_silver_data.ipynb
+│   └── validate_gold_tables.ipynb
 │
 ├── src/                                    # Production Python modules
 │   ├── ingestion/
-│   │   ├── download_data.py
+│   │   ├── download_raw.py
 │   │   └── upload_to_s3.py
 │   ├── processing/
-│   │   ├── clean_jobs.py
-│   │   ├── extract_skills.py
-│   │   └── quality_checks.py
-│   ├── features/
+│   │   ├── silver_clean_pandas.py
+│   │   ├── quality_checks.py
+│   │   ├── metadata_tracker.py
 │   │   ├── build_gold_layer.py
-│   │   └── build_ml_features.py
+│   │   └── build_ml_dashboard_summaries.py
+│   ├── features/
+│   │   ├── build_role_classification_features.py
+│   │   ├── build_skill_weekly_features.py
+│   │   └── build_job_anomaly_features.py
 │   └── ml/
 │       ├── classification/
-│       │   ├── train_classifier.py
-│       │   └── predict_roles.py
+│       │   ├── train_classifiers.py
+│       │   ├── refine_classifiers.py
+│       │   └── score_role_predictions.py
 │       ├── forecasting/
-│       │   ├── train_forecasts.py
-│       │   └── detect_emerging.py
+│       │   ├── train_skill_forecasts.py
+│       │   └── build_emerging_skill_signals.py
 │       ├── recommendation/
-│       │   ├── compute_similarity.py
-│       │   └── recommend_transitions.py
+│       │   ├── build_role_similarity.py
+│       │   └── generate_transition_recommendations.py
 │       └── anomaly_detection/
-│           └── detect_anomalies.py
+│           └── detect_posting_anomalies.py
 │
 ├── models/                                 # Trained model artifacts
 │   └── classification/
@@ -893,13 +898,21 @@ career-intelligence-data-platform/
 │
 ├── outputs/                                # Charts and analysis outputs
 │   ├── charts/
-│   └── ml/
-│       └── forecast_model_comparison.csv
+│   │   └── *.png                           # EDA visualizations
+│   ├── ml/
+│   │   ├── classification_model_comparison.csv
+│   │   ├── classification_model_comparison_refined.csv
+│   │   ├── classification_report_*.txt
+│   │   └── forecast_model_comparison.csv
+│   └── quality_report.txt
 │
 ├── docs/                                   # Additional documentation
+│   └── source_metadata.md
 │
 ├── README.md                               # This file
 ├── requirements.txt                        # Python dependencies
+├── LICENSE                                 # MIT License
+├── .env.example                            # Environment variable template
 └── .gitignore
 ```
 
@@ -998,7 +1011,7 @@ This project showcases the following technical and analytical competencies relev
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/career-intelligence-data-platform.git
+git clone https://github.com/Aravind5100/career-intelligence-data-platform.git
 cd career-intelligence-data-platform
 
 # Create virtual environment
@@ -1013,63 +1026,61 @@ pip install -r requirements.txt
 
 **1. Data Ingestion**
 ```bash
-python src/ingestion/download_data.py
+python src/ingestion/download_raw.py
 python src/ingestion/upload_to_s3.py --layer bronze
 ```
 
 **2. Data Cleaning & Silver Layer**
 ```bash
-python src/processing/clean_jobs.py
-python src/processing/extract_skills.py
+python src/processing/silver_clean_pandas.py
 python src/processing/quality_checks.py
+python src/processing/metadata_tracker.py
 python src/ingestion/upload_to_s3.py --layer silver
 ```
 
 **3. Gold Analytics Layer**
 ```bash
-python src/features/build_gold_layer.py
+python src/processing/build_gold_layer.py
 python src/ingestion/upload_to_s3.py --layer gold
 ```
 
 **4. ML Feature Engineering**
 ```bash
-python src/features/build_ml_features.py
+python src/features/build_role_classification_features.py
+python src/features/build_skill_weekly_features.py
 ```
 
 **5. ML Module Execution**
 ```bash
 # Classification
-python src/ml/classification/train_classifier.py
-python src/ml/classification/predict_roles.py
+python src/ml/classification/train_classifiers.py
+python src/ml/classification/refine_classifiers.py
+python src/ml/classification/score_role_predictions.py
 
 # Forecasting
-python src/ml/forecasting/train_forecasts.py
-python src/ml/forecasting/detect_emerging.py
+python src/ml/forecasting/train_skill_forecasts.py
+python src/ml/forecasting/build_emerging_skill_signals.py
 
 # Recommendation
-python src/ml/recommendation/compute_similarity.py
-python src/ml/recommendation/recommend_transitions.py
+python src/ml/recommendation/build_role_similarity.py
+python src/ml/recommendation/generate_transition_recommendations.py
 
 # Anomaly Detection
-python src/ml/anomaly_detection/detect_anomalies.py
+python src/features/build_job_anomaly_features.py
+python src/ml/anomaly_detection/detect_posting_anomalies.py
 ```
 
-**6. Upload ML Outputs**
+**6. Dashboard Summaries & Upload**
 ```bash
+python src/processing/build_ml_dashboard_summaries.py
 python src/ingestion/upload_to_s3.py --layer ml
 ```
 
 **Alternative: Jupyter Notebooks**
 
-Run notebooks sequentially in `notebooks/` for interactive exploration:
-1. `01_data_ingestion.ipynb`
-2. `02_data_cleaning.ipynb`
-3. `03_eda.ipynb`
-4. `04_gold_layer.ipynb`
-5. `05_ml_classification.ipynb`
-6. `06_ml_forecasting.ipynb`
-7. `07_ml_recommendation.ipynb`
-8. `08_ml_anomaly_detection.ipynb`
+Interactive exploration notebooks are available in `notebooks/`:
+- `01_eda_silver_data.ipynb` — Exploratory data analysis on Silver layer
+- `validate_gold_tables.ipynb` — Gold table validation and inspection
 
 ---
 

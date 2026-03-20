@@ -98,9 +98,8 @@ def prepare_data():
             "true": True,
             "false": False
         })
-
-    # Convert boolean values to numeric 0/1 while preserving missing values
-    df[col] = df[col].map({True: 1, False: 0})
+        # Convert boolean values to numeric 0/1 while preserving missing values
+        df[col] = df[col].map({True: 1, False: 0})
 
     # Numeric columns
     df["salary_year_avg"] = pd.to_numeric(df["salary_year_avg"], errors="coerce")
