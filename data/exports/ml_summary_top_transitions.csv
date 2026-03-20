@@ -1,0 +1,31 @@
+source_role,target_role,similarity_score,shared_skills,missing_skills,recommended_next_skills
+Business Analyst,Data Analyst,0.977,"aws, azure, excel, go, oracle, power bi, powerpoint, python, r, sap, sql, sql server, tableau, word",sas,sas
+Business Analyst,Senior Data Analyst,0.9336,"aws, azure, excel, oracle, power bi, powerpoint, python, r, sql, sql server, tableau, word","looker, sas, snowflake","snowflake, sas, looker"
+Business Analyst,Data Scientist,0.6903,"aws, azure, excel, power bi, python, r, sql, tableau","hadoop, java, pandas, pytorch, sas, spark, tensorflow","spark, java, hadoop, sas, tensorflow"
+Cloud Engineer,Software Engineer,0.9271,"aws, azure, docker, gcp, git, go, java, kubernetes, linux, python, sql","javascript, kafka, react, spark","spark, kafka, javascript, react"
+Cloud Engineer,Data Engineer,0.8388,"aws, azure, gcp, git, java, python, sql","airflow, databricks, hadoop, kafka, nosql, scala, snowflake, spark","spark, hadoop, scala, snowflake, databricks"
+Cloud Engineer,Senior Data Engineer,0.8386,"aws, azure, gcp, java, python, sql","airflow, databricks, hadoop, kafka, nosql, redshift, scala, snowflake, spark","spark, hadoop, scala, snowflake, kafka"
+Data Analyst,Senior Data Analyst,0.9834,"aws, azure, excel, oracle, power bi, powerpoint, python, r, sas, sql, sql server, tableau, word","looker, snowflake","snowflake, looker"
+Data Analyst,Business Analyst,0.977,"aws, azure, excel, go, oracle, power bi, powerpoint, python, r, sap, sql, sql server, tableau, word",flow,flow
+Data Analyst,Data Scientist,0.8056,"aws, azure, excel, power bi, python, r, sas, sql, tableau","hadoop, java, pandas, pytorch, spark, tensorflow","spark, java, hadoop, tensorflow, pandas"
+Data Engineer,Senior Data Engineer,0.9948,"airflow, aws, azure, databricks, gcp, hadoop, java, kafka, nosql, python, scala, snowflake, spark, sql",redshift,redshift
+Data Engineer,Software Engineer,0.875,"aws, azure, gcp, git, java, kafka, python, spark, sql","docker, go, javascript, kubernetes, linux, react","docker, kubernetes, go, linux, javascript"
+Data Engineer,Senior Data Scientist,0.8711,"aws, azure, hadoop, java, python, spark, sql","excel, pandas, pytorch, r, sas, scikit-learn, tableau, tensorflow","tableau, r, excel, sas, tensorflow"
+Data Scientist,Senior Data Scientist,0.9961,"aws, azure, excel, hadoop, java, pandas, python, pytorch, r, sas, spark, sql, tableau, tensorflow",scikit-learn,scikit-learn
+Data Scientist,Data Engineer,0.8513,"aws, azure, hadoop, java, python, spark, sql","airflow, databricks, gcp, git, kafka, nosql, scala, snowflake","scala, snowflake, databricks, kafka, gcp"
+Data Scientist,Senior Data Analyst,0.8508,"aws, azure, excel, power bi, python, r, sas, sql, tableau","looker, oracle, powerpoint, snowflake, sql server, word","snowflake, oracle, sql server, powerpoint, word"
+Machine Learning Engineer,Senior Data Scientist,0.8721,"aws, azure, java, pandas, python, pytorch, r, scikit-learn, spark, sql, tensorflow","excel, hadoop, sas, tableau","tableau, excel, hadoop, sas"
+Machine Learning Engineer,Data Scientist,0.8483,"aws, azure, java, pandas, python, pytorch, r, spark, sql, tensorflow","excel, hadoop, power bi, sas, tableau","tableau, excel, power bi, hadoop, sas"
+Machine Learning Engineer,Software Engineer,0.8018,"aws, azure, docker, gcp, git, java, kubernetes, python, spark, sql","go, javascript, kafka, linux, react","kafka, go, linux, javascript, react"
+Senior Data Analyst,Data Analyst,0.9834,"aws, azure, excel, oracle, power bi, powerpoint, python, r, sas, sql, sql server, tableau, word","go, sap","go, sap"
+Senior Data Analyst,Business Analyst,0.9336,"aws, azure, excel, oracle, power bi, powerpoint, python, r, sql, sql server, tableau, word","flow, go, sap","go, sap, flow"
+Senior Data Analyst,Data Scientist,0.8508,"aws, azure, excel, power bi, python, r, sas, sql, tableau","hadoop, java, pandas, pytorch, spark, tensorflow","spark, java, hadoop, tensorflow, pandas"
+Senior Data Engineer,Data Engineer,0.9948,"airflow, aws, azure, databricks, gcp, hadoop, java, kafka, nosql, python, scala, snowflake, spark, sql",git,git
+Senior Data Engineer,Software Engineer,0.8699,"aws, azure, gcp, java, kafka, python, spark, sql","docker, git, go, javascript, kubernetes, linux, react","git, docker, kubernetes, go, linux"
+Senior Data Engineer,Senior Data Scientist,0.8436,"aws, azure, hadoop, java, python, spark, sql","excel, pandas, pytorch, r, sas, scikit-learn, tableau, tensorflow","tableau, r, excel, sas, tensorflow"
+Senior Data Scientist,Data Scientist,0.9961,"aws, azure, excel, hadoop, java, pandas, python, pytorch, r, sas, spark, sql, tableau, tensorflow",power bi,power bi
+Senior Data Scientist,Machine Learning Engineer,0.8721,"aws, azure, java, pandas, python, pytorch, r, scikit-learn, spark, sql, tensorflow","docker, gcp, git, kubernetes","gcp, docker, git, kubernetes"
+Senior Data Scientist,Data Engineer,0.8711,"aws, azure, hadoop, java, python, spark, sql","airflow, databricks, gcp, git, kafka, nosql, scala, snowflake","scala, snowflake, databricks, kafka, gcp"
+Software Engineer,Cloud Engineer,0.9271,"aws, azure, docker, gcp, git, go, java, kubernetes, linux, python, sql","ansible, excel, terraform, windows","excel, terraform, windows, ansible"
+Software Engineer,Data Engineer,0.875,"aws, azure, gcp, git, java, kafka, python, spark, sql","airflow, databricks, hadoop, nosql, scala, snowflake","hadoop, scala, snowflake, databricks, airflow"
+Software Engineer,Senior Data Engineer,0.8699,"aws, azure, gcp, java, kafka, python, spark, sql","airflow, databricks, hadoop, nosql, redshift, scala, snowflake","hadoop, scala, snowflake, databricks, airflow"

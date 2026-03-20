@@ -1,0 +1,15 @@
+metric,value
+total_scored_jobs,758502
+correct_predictions,727998
+incorrect_predictions,30504
+agreement_rate,0.9598
+top_confusion_1,Data Analyst -> Data Scientist (2807)
+top_confusion_2,Data Analyst -> Senior Data Analyst (2505)
+top_confusion_3,Data Scientist -> Data Analyst (2431)
+top_confusion_4,Data Analyst -> Business Analyst (2247)
+top_confusion_5,Data Scientist -> Senior Data Scientist (1852)
+top_confusion_6,Data Engineer -> Senior Data Engineer (1727)
+top_confusion_7,Data Scientist -> Business Analyst (1395)
+top_confusion_8,Data Engineer -> Data Scientist (1215)
+top_confusion_9,Data Scientist -> Data Engineer (1135)
+top_confusion_10,Data Engineer -> Data Analyst (1124)

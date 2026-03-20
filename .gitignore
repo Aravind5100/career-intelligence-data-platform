@@ -1,8 +1,29 @@
+# Virtual environment
 venv/
+
+# Python cache
 __pycache__/
-.ipynb_checkpoints/
-.DS_Store
-.env
-data/raw/
-outputs/
 *.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+
+# Secrets
+.env
+
+# Raw data (large, stored in S3 Bronze)
+data/raw/
+
+# Large generated feature tables (regenerable from pipeline)
+data/ml_ready/feature_role_classification.csv
+data/ml_ready/feature_job_anomalies.csv
+
+# Large ML exports (regenerable, exceed GitHub limits)
+data/exports/ml_role_predictions.csv
+data/exports/ml_posting_anomalies.csv
+
+# Large model artifacts (original unrefined model is 2GB)
+models/classification/best_role_classifier.joblib

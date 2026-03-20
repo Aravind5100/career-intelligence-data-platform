@@ -1,0 +1,11 @@
+skill,prior_4wk_actual_avg,last_4wk_actual_avg,next_4wk_forecast_avg,recent_growth_pct,forecast_growth_pct,emerging_score,signal_label
+tableau,2174.25,1892.5,2300.66,-12.96,21.57,4.3,Emerging
+power bi,1782.75,1583.5,1892.74,-11.18,19.53,4.18,Emerging
+excel,2210.0,1924.5,2311.23,-12.92,20.09,3.59,Emerging
+r,2226.75,1898.25,2286.72,-14.75,20.46,2.86,Emerging
+sql,6874.25,5925.25,6868.62,-13.81,15.92,1.06,Stable
+python,6952.0,6049.5,6920.52,-12.98,14.4,0.71,Stable
+aws,2648.0,2324.5,2606.61,-12.22,12.14,-0.04,Stable
+spark,1986.75,1719.5,1927.76,-13.45,12.11,-0.67,Stable
+azure,2480.25,2127.5,2373.33,-14.22,11.56,-1.33,Stable
+java,1503.5,1318.5,1430.43,-12.3,8.49,-1.91,Stable

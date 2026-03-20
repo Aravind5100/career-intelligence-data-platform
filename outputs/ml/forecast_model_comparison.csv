@@ -1,0 +1,31 @@
+skill,model_name,mae,rmse
+aws,naive,187.4167,292.6031
+aws,exp_smoothing,177.0069,263.139
+aws,arima,212.4524,321.8713
+azure,naive,206.1667,308.2853
+azure,exp_smoothing,172.2833,268.012
+azure,arima,213.7249,313.1753
+excel,naive,306.9167,435.4292
+excel,exp_smoothing,176.2043,323.0063
+excel,arima,236.1364,380.6264
+java,naive,128.75,167.4144
+java,exp_smoothing,112.644,150.3538
+java,arima,135.9439,173.1709
+power bi,naive,138.4167,254.7085
+power bi,exp_smoothing,165.1203,277.9371
+power bi,arima,138.4167,254.7201
+python,naive,505.6667,846.5149
+python,exp_smoothing,485.3352,809.6335
+python,arima,492.2244,825.0319
+r,naive,197.9167,329.3556
+r,exp_smoothing,179.6295,301.5384
+r,arima,197.9247,329.3567
+spark,naive,171.3333,262.4176
+spark,exp_smoothing,151.521,224.0144
+spark,arima,259.6145,352.5673
+sql,naive,527.0,920.6948
+sql,exp_smoothing,448.0436,798.865
+sql,arima,545.9359,930.735
+tableau,naive,186.3333,311.84
+tableau,exp_smoothing,194.2392,320.2496
+tableau,arima,285.9953,408.3285

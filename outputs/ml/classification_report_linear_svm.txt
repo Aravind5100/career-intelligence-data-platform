@@ -1,0 +1,14 @@
+                       precision    recall  f1-score   support
+
+     Business Analyst       0.00      0.00      0.00      9803
+         Data Analyst       0.26      1.00      0.41     39175
+        Data Engineer       0.00      0.00      0.00     37202
+       Data Scientist       0.00      0.00      0.00     34424
+  Senior Data Analyst       0.00      0.00      0.00      5838
+ Senior Data Engineer       0.00      0.00      0.00      8905
+Senior Data Scientist       0.00      0.00      0.00      7387
+    Software Engineer       0.00      0.00      0.00      8967
+
+             accuracy                           0.26    151701
+            macro avg       0.03      0.12      0.05    151701
+         weighted avg       0.07      0.26      0.11    151701

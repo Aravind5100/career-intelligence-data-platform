@@ -1,0 +1,4 @@
+model_name,accuracy,macro_precision,macro_recall,macro_f1
+linear_svm_text_only,0.9455,0.9177,0.9385,0.9276
+random_forest_svd_refined,0.8879,0.9006,0.8155,0.8518
+logistic_regression_refined,0.0499,0.0541,0.1255,0.0144

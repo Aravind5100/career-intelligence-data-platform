@@ -1,0 +1,53 @@
+QUALITY REPORT
+============================================================
+
+1. ROW COUNTS
+Jobs rows: 784895
+Job-skills rows: 3591106
+
+2. CRITICAL COLUMN NULL CHECKS
+job_title: 1 nulls (0.0%)
+company_name: 18 nulls (0.0%)
+job_location: 1045 nulls (0.13%)
+job_posted_date: 0 nulls (0.0%)
+job_title_short: 0 nulls (0.0%)
+
+3. DUPLICATE CHECKS
+Duplicate job_key values: 0
+Duplicate job_key-skill pairs: 0
+
+4. SALARY SANITY CHECKS
+Salary Year Avg Summary:
+count     21997.000000
+mean     123292.217571
+std       48316.796058
+min       15000.000000
+25%       90000.000000
+50%      115000.000000
+75%      150000.000000
+max      960000.000000
+Name: salary_year_avg, dtype: float64
+
+Salary Hour Avg Summary:
+count    10659.000000
+mean        47.016321
+std         21.892867
+min          8.000000
+25%         27.500000
+50%         45.980000
+75%         61.159996
+max        391.000000
+Name: salary_hour_avg, dtype: float64
+
+Negative annual salary rows: 0
+Negative hourly salary rows: 0
+
+5. BOOLEAN FIELD VALUE COUNTS
+job_work_from_home: {np.False_: 715389, np.True_: 69506}
+job_no_degree_mention: {np.False_: 544430, np.True_: 240465}
+job_health_insurance: {np.False_: 698419, np.True_: 86476}
+
+6. SKILL TABLE QUALITY
+Null skills: 0
+Empty skills: 0
+Unique skills: 252

@@ -1,0 +1,11 @@
+metric,value
+total_anomalies,38305
+unique_anomaly_reasons,8
+reason::Role disagreement + Skill count outlier,16030
+reason::Role disagreement,14056
+reason::Skill count outlier,5225
+reason::Salary outlier + Skill count outlier,1235
+reason::Salary outlier,1109
+reason::Model-detected anomaly,257
+reason::Role disagreement + Salary outlier + Skill count outlier,214
+reason::Role disagreement + Salary outlier,179

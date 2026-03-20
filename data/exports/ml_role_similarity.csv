@@ -1,0 +1,91 @@
+source_role,target_role,similarity_score
+Business Analyst,Data Analyst,0.9770462433588913
+Business Analyst,Senior Data Analyst,0.9336187028118043
+Business Analyst,Data Scientist,0.6902618875711926
+Business Analyst,Senior Data Scientist,0.6674816403576005
+Business Analyst,Data Engineer,0.6208121637420997
+Business Analyst,Senior Data Engineer,0.5743479135099415
+Business Analyst,Software Engineer,0.5463283470770102
+Business Analyst,Cloud Engineer,0.5129484406256372
+Business Analyst,Machine Learning Engineer,0.43015792996916935
+Cloud Engineer,Software Engineer,0.9271191477361568
+Cloud Engineer,Data Engineer,0.8388273366550315
+Cloud Engineer,Senior Data Engineer,0.8385614911045539
+Cloud Engineer,Machine Learning Engineer,0.7588720750854737
+Cloud Engineer,Senior Data Scientist,0.7114858460052217
+Cloud Engineer,Data Scientist,0.6940891807268922
+Cloud Engineer,Senior Data Analyst,0.5777166946326555
+Cloud Engineer,Data Analyst,0.553951434450099
+Cloud Engineer,Business Analyst,0.5129484406256372
+Data Analyst,Senior Data Analyst,0.9833732884395168
+Data Analyst,Business Analyst,0.9770462433588913
+Data Analyst,Data Scientist,0.8055759494440329
+Data Analyst,Senior Data Scientist,0.7837166269622537
+Data Analyst,Data Engineer,0.7022570107330903
+Data Analyst,Senior Data Engineer,0.6537791520156401
+Data Analyst,Software Engineer,0.6042139348113164
+Data Analyst,Cloud Engineer,0.553951434450099
+Data Analyst,Machine Learning Engineer,0.521550415402896
+Data Engineer,Senior Data Engineer,0.994778090968722
+Data Engineer,Software Engineer,0.8749615279089555
+Data Engineer,Senior Data Scientist,0.8710753131181961
+Data Engineer,Data Scientist,0.8512572146445907
+Data Engineer,Cloud Engineer,0.8388273366550315
+Data Engineer,Machine Learning Engineer,0.7979735269441198
+Data Engineer,Senior Data Analyst,0.7543337673232722
+Data Engineer,Data Analyst,0.7022570107330903
+Data Engineer,Business Analyst,0.6208121637420997
+Data Scientist,Senior Data Scientist,0.9960869033529195
+Data Scientist,Data Engineer,0.8512572146445907
+Data Scientist,Senior Data Analyst,0.8507528863029022
+Data Scientist,Machine Learning Engineer,0.848282854474383
+Data Scientist,Senior Data Engineer,0.8194094629058161
+Data Scientist,Data Analyst,0.8055759494440329
+Data Scientist,Software Engineer,0.7580656912625326
+Data Scientist,Cloud Engineer,0.6940891807268922
+Data Scientist,Business Analyst,0.6902618875711926
+Machine Learning Engineer,Senior Data Scientist,0.8720932763895837
+Machine Learning Engineer,Data Scientist,0.848282854474383
+Machine Learning Engineer,Software Engineer,0.8018164019087965
+Machine Learning Engineer,Data Engineer,0.7979735269441198
+Machine Learning Engineer,Senior Data Engineer,0.7940693579072101
+Machine Learning Engineer,Cloud Engineer,0.7588720750854737
+Machine Learning Engineer,Senior Data Analyst,0.5585530068572695
+Machine Learning Engineer,Data Analyst,0.521550415402896
+Machine Learning Engineer,Business Analyst,0.43015792996916935
+Senior Data Analyst,Data Analyst,0.9833732884395168
+Senior Data Analyst,Business Analyst,0.9336187028118043
+Senior Data Analyst,Data Scientist,0.8507528863029022
+Senior Data Analyst,Senior Data Scientist,0.8341280988547306
+Senior Data Analyst,Data Engineer,0.7543337673232722
+Senior Data Analyst,Senior Data Engineer,0.7089161006021478
+Senior Data Analyst,Software Engineer,0.6304947556081548
+Senior Data Analyst,Cloud Engineer,0.5777166946326555
+Senior Data Analyst,Machine Learning Engineer,0.5585530068572695
+Senior Data Engineer,Data Engineer,0.994778090968722
+Senior Data Engineer,Software Engineer,0.8698751615796634
+Senior Data Engineer,Senior Data Scientist,0.8435597044608708
+Senior Data Engineer,Cloud Engineer,0.8385614911045539
+Senior Data Engineer,Data Scientist,0.8194094629058161
+Senior Data Engineer,Machine Learning Engineer,0.7940693579072101
+Senior Data Engineer,Senior Data Analyst,0.7089161006021478
+Senior Data Engineer,Data Analyst,0.6537791520156401
+Senior Data Engineer,Business Analyst,0.5743479135099415
+Senior Data Scientist,Data Scientist,0.9960869033529195
+Senior Data Scientist,Machine Learning Engineer,0.8720932763895837
+Senior Data Scientist,Data Engineer,0.8710753131181961
+Senior Data Scientist,Senior Data Engineer,0.8435597044608708
+Senior Data Scientist,Senior Data Analyst,0.8341280988547306
+Senior Data Scientist,Data Analyst,0.7837166269622537
+Senior Data Scientist,Software Engineer,0.766609037079699
+Senior Data Scientist,Cloud Engineer,0.7114858460052217
+Senior Data Scientist,Business Analyst,0.6674816403576005
+Software Engineer,Cloud Engineer,0.9271191477361568
+Software Engineer,Data Engineer,0.8749615279089555
+Software Engineer,Senior Data Engineer,0.8698751615796634
+Software Engineer,Machine Learning Engineer,0.8018164019087965
+Software Engineer,Senior Data Scientist,0.766609037079699
+Software Engineer,Data Scientist,0.7580656912625326
+Software Engineer,Senior Data Analyst,0.6304947556081548
+Software Engineer,Data Analyst,0.6042139348113164
+Software Engineer,Business Analyst,0.5463283470770102
